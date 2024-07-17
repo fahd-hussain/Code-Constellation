@@ -23,7 +23,6 @@
     "^react(.*)$",
     "^next(.*)$",
     "^tailwindcss(.*)$",
-    "<THIRD_PARTY_MODULES>",
     "",
     "^app/(.*)$",
     "^constants/(.*)$",
