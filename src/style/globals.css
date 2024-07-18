@@ -2,4 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'style/colors.style.css';
+@import './colors.style.css';

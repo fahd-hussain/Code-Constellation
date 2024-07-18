@@ -20,9 +20,8 @@
   "tabWidth": 2,
   "plugins": ["@trivago/prettier-plugin-sort-imports"],
   "importOrder": [
-    "^react(.*)$",
-    "^next(.*)$",
-    "^tailwindcss(.*)$",
+    "^(react(.*)|next(.*))$",
+    "^(tailwindcss(.*)|clsx(.*))$",
     "",
     "^app/(.*)$",
     "^constant/(.*)$",
