@@ -25,8 +25,11 @@
     "^tailwindcss(.*)$",
     "",
     "^app/(.*)$",
-    "^constants/(.*)$",
-    "^styles/(.*)$",
+    "^constant/(.*)$",
+    "^style/(.*)$",
+    "^@?\\w",
+    "/.+(?<!(css|scss|less))$",
+    "(css|scss|less)$",
     "^[./]"
   ],
   "importOrderSeparation": true,
