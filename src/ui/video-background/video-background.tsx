@@ -1,3 +1,5 @@
+import React from 'react'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -28,8 +30,12 @@ const VideoBackground = () => {
               <h2 className={clsx('text-cyan100')}>Code Constellation</h2>
             </div>
             <ul className={clsx('w-full', 'flex gap-4 justify-end items-center')}>
-              {NAVBAR_LINKS.map(({ title, ...rest }) => (
-                <Link {...rest} className={clsx('text-lg text-white100')}>
+              {NAVBAR_LINKS.map(({ id, href, title }) => (
+                <Link
+                  key={id}
+                  id={`link-${id}`}
+                  href={href}
+                  className={clsx('text-lg text-white100')}>
                   {title}
                 </Link>
               ))}
