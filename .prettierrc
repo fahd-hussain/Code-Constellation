@@ -22,10 +22,14 @@
   "importOrder": [
     "^react(.*)$",
     "^next(.*)$",
-    "<THIRD_PARTY_MODULES>",
+    "^(tailwindcss(.*)|clsx(.*))$",
     "",
-    "^@/components/(.*)$",
-    "^@/utils/(.*)$",
+    "^app/(.*)$",
+    "^constant/(.*)$",
+    "^style/(.*)$",
+    "^@?\\w",
+    "/.+(?<!(css|scss|less))$",
+    "(css|scss|less)$",
     "^[./]"
   ],
   "importOrderSeparation": true,
