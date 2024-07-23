@@ -5,6 +5,9 @@ import Link from 'next/link'
 
 import clsx from 'clsx'
 
+import { Button } from 'component'
+import { COLOR_NAME } from 'enum'
+
 const NAVBAR_LINKS = [
   { href: 'components', title: 'Components', id: 'components' },
   { href: 'ui', title: 'UI', id: 'ui' },
@@ -25,18 +28,16 @@ const VideoBackground = () => {
       <div className={clsx('w-full h-full', 'flex justify-center fixed', 'px-12 py-6')}>
         <div className={clsx('w-full', 'flex flex-col')}>
           <nav className={clsx('flex items-center justify-between')}>
-            <div className={clsx('w-full', 'flex gap-2 justify-start')}>
+            <div className={clsx('flex-1', 'flex gap-2 justify-start')}>
               <Image src='/images/logo_48.png' width={24} height={24} alt='Logo' />
-              <h2 className={clsx('text-cyan100')}>Code Constellation</h2>
+              <h2 className={clsx('text-cyan100 font-semibold')}>Code Constellation</h2>
             </div>
-            <ul className={clsx('w-full', 'flex gap-4 justify-end items-center')}>
+            <ul className={clsx('flex-2', 'flex gap-4 justify-end items-center')}>
               {NAVBAR_LINKS.map(({ id, href, title }) => (
-                <Link
-                  key={id}
-                  id={`link-${id}`}
-                  href={href}
-                  className={clsx('text-lg text-white100')}>
-                  {title}
+                <Link key={id} id={`link-${id}`} href={href}>
+                  <Button color={COLOR_NAME.CYAN} backgroundType='none' className='w-fit !p-0'>
+                    {title}
+                  </Button>
                 </Link>
               ))}
               <input
@@ -53,16 +54,9 @@ const VideoBackground = () => {
           <div className={clsx('flex min-h-screen flex-col items-center justify-center gap-4')}>
             <p className={clsx('text-6xl font-bold', 'text-cyan300')}>Code Constellation</p>
             <p className={clsx('text-3xl font-semibold', 'text-gray300')}>By Fahad Hussain</p>
-            <button
-              className={clsx(
-                'border-2 border-cyan600',
-                'bg-transparent text-cyan600',
-                'hover:border-cyan700 hover:text-cyan700 hover:bg-cyan200',
-                'py-2 px-4 rounded-lg',
-                'text-lg font-semibold'
-              )}>
+            <Button color={COLOR_NAME.CYAN} backgroundType='filled'>
               Get Started
-            </button>
+            </Button>
           </div>
         </div>
       </div>
